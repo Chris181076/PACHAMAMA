@@ -494,19 +494,143 @@ main > .etiquetteEv > .figureAction {
     width: 100%;
     height:auto;
 }
-.sousTitre2{
+#sousTitre2{
     width: 100%;
-    height: 4rem;
-    background-image: url(../images/oiseau.png);
+    height: 3rem;
+    background-image: url(../images/OiseauSousTitre.png);
     margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     color: #fff;
+    position: relative;
+    background-repeat: no-repeat;
+}
+#sousTitre2>img{
+    position: absolute;
+    left: 0.5rem;
+    top: 1.9rem;
 }
 .buttonMeditation{
     display: flex;
-    margin: 2rem auto;
-    width: 25rem;
+    flex-direction: column;
+    justify-content: center;  
+    top: 2rem;  
+    width: 20rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
 }
+#sousTitre3{
+    width: 100%;
+    height: 3rem;
+    background-image: url(../images/feuillesSousTitre.png);
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    background-repeat: no-repeat;
+}
+#sousTitre3>img{
+    position: absolute;
+    right: 0.2rem;
+    top: 2rem;
+}
+.Mediter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+.Mediter>img{
+    width: 1.625rem;
+    height: auto;
+}
+.Mediter>p{
+    text-align: center;
+}
+#contenuMediter>p{
+    margin: 1.5rem;
+}
+#contenuMediter2>p{
+    margin: 1.5rem;
+}
+#mediterDeco>img{
+    width: 18.625rem;
+    height: auto;
+}
+#abeille{
+    margin: 2rem;
+}
+#abeille>img{
+    width: auto;
+    height: 11.5rem;
+    border-radius: 20px;
+}
+#abeille>p{
+    padding-top: 2rem;
+}
+#abeille>p:first-of-type{
+    text-align: center;
+    font-weight: bold;
+}
+#abeille2{
+    margin: 2rem;
+}
+#abeille2>p:first-child{
+    text-align: center;
+    font-weight: bold;
+}
+#abeille2>p{
+    padding-top: 2rem;
+}
+#abeille2>img{
+    width: auto;
+    height: 11.5rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+#abeille, #abeille2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#buttonAbeille{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 16.875rem;
+    height: 4.625rem;
+    background-color: #FFD780;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+#buttonAbeille>p{
+    font-size: 1rem;
+}
+#buttonArbre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #8FB546;
+    width: 16.875rem;
+    height: 4.625rem;
+    border-radius: 20px;
+}
+.flex2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* CONTACT */
