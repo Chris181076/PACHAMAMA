@@ -3,9 +3,12 @@
     padding: 0;
     font-family: "Open Sans", sans-serif;
     list-style-type: none;
+    text-decoration: none;
+    color: inherit;
 }
 body{
-    background-color: #F8EAE4;
+    background-color: #F8E1A4;
+    height: 100%;
 }
 /*header*/
 header{
@@ -13,9 +16,10 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-#logo>img{
+#logo>a>img{
     width: 8.125rem;
     height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); 
 }
 #boutonsHeader>.boutons{
     width: 9.375rem;
@@ -26,19 +30,28 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    transition: all 1s;
+}
+#boutonsHeader>.boutons:hover{
+    background-color: #9ED19C;
+
 }
 
-#boutonsHeader>.boutons>p{
+#boutonsHeader>.boutons>a{
     font-size: 0.875rem;
     color: #000;
-    
+    text-transform: uppercase;
 }
 #burger{
     width: 2.1875rem;
     margin: 1rem;
+    cursor: pointer;
 }
 #burger>img{
     position: relative;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 #burger>.mainMenu{
     position: absolute;
@@ -67,10 +80,14 @@ header>#burger>.mainMenu>ul>li{
     margin: 0 auto;
     text-align: center;
     width: 9.375rem;
-    background-color: #C4DAC3;
+    background-color: #F8E1A4;
     border-radius: 20px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+header>#burger>.mainMenu>ul>li:hover{
+    background-color: #D2B48C;
+    color: #fff;
 }
 /*main*/
 main>#figure{
@@ -83,10 +100,11 @@ main>#figure>img{
     height: auto;
     margin-top: 1.25rem;
     object-fit: cover;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 main>#figure>p{
     position: absolute;
-    font-family: "Pacifico", cursive;
+    font-family: "Open Sans", sans-serif;
     font-size: medium;
     color: #fff;
     letter-spacing: 0.07rem;
@@ -94,6 +112,8 @@ main>#figure>p{
     left: 50%; 
     transform: translate(-50%, -50%);
     white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 550;
 }
 main>#missions{
     display: grid;
@@ -109,6 +129,7 @@ main>#missions>.mission{
 main>#missions>.mission>img{
     width: 1.875rem;
     height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 main>#missions>.mission>p{
     margin-left: 1.5rem;
@@ -130,6 +151,7 @@ main>.categories>p{
     font-weight: 600;
     z-index: 1;
     position: relative;
+    color: #F8EAE4;
 }
 main>.categories>img{
     position: absolute;
@@ -138,138 +160,156 @@ main>.categories>img{
     transform: translate(-50%, -100%); 
     height: auto;
     z-index: 0;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
 }
-.actu {
+.actu-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 1rem; 
-    align-items: center; 
+    grid-template-columns: 1fr;
+    gap: 3rem; 
+    margin: 0 auto; 
+    max-width: 1000px; 
+    padding: 1rem; 
     justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 1.5rem;
-    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
-.actu > img {
-    width: 6.25rem;
-    height: 7rem;
-    object-fit: cover;
-    border-radius: 20px;
-    justify-self: center;
-}
-.actu > .descriptionActu {
+
+.actu-container>.descriptionActu {
     display: flex;
     flex-direction: column; 
     gap: 0.5rem;
-    text-align: center;
-    justify-self: center; 
-    max-width: 80%; 
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 10rem;
+    height: 15.5rem;
+    margin-left: 25%;
 }
-
-.actu > .descriptionActu > h1 {
+.descriptionActu> img {
+    width: 100%;
+    height: 6.25rem;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.descriptionActu > h1 {
     font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 0.625rem;
-    border-radius: 20px;
-    margin: 0 auto;
-}
-
-.actu > .descriptionActu > p {
-    font-size: 0.875rem;
-    line-height: 1.4;
-    margin: 0 auto; 
     padding: 0.5rem;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.lightItalic{
+.descriptionActu > p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    flex-wrap: wrap;
+}
+.lightItalic {
     font-weight: 300;
     font-style: italic;
+    color: #007BFF;
+}
+
+.lightItalic>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lightItalic a:hover {
+    text-decoration: underline;
 }
 
 
 /* footer */
-footer{
+footer {
+    background-color: #D2B48C;
     width: 100%;
-    height: 20rem;
+    height: auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    box-shadow: 0 -0.1rem 1rem;
-    margin-top: 2rem;
-}
-#footerTitre{
+    box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.5); 
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-#titre {
-    display: flex;
     align-items: center; 
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-#titre p {
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin: 0;
-    color: #000;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
 }
 
 #footerTitre {
     text-align: center;
     padding: 1rem;
-    background-color: #FAF4EF;
+    margin-bottom: 2rem;
 }
 
-#footerTitre #titre {
+#titre {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem; 
+    margin-top: 0.5rem;
+}
+
+#titre p {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin: 0;
+    color: #000;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: #FAF4EF;
-}
-
-#mentionsFooterG {
-    flex: 1;
-    max-width: 45%;
-    margin-left: 1rem;
-}
-
-#mentionsFooterD {
-    flex: 1;
-    max-width: 45%;
+    max-width: 1200px; 
+    gap: 2rem; 
+    flex-wrap: wrap;
 }
 
 #mentionsFooterG, #mentionsFooterD {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .mentionFooterG, .mentionFooterD {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.mentionFooterG img, .mentionFooterD img {
+    height: 1.4rem; 
+    width: auto;
 }
 
 #reseauxSociaux {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 1rem;
-}
-
-.mentionFooterG img, .mentionFooterD img {
-    margin-right: 1rem;
-    height: auto;
+    gap: 1rem; 
+    margin-top: 1rem;
 }
 
 #mailto {
     display: flex;
     flex-direction: column; 
+    gap: 0.2rem; 
+    font-size: 0.9rem; 
+    color: #000;
+}
+
+.mentionFooterG > p:hover,
+.mentionFooterD > p:hover,
+#mailto p:hover {
+    color: #F8E1A4;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
 
 /* Qui sommes nous?*/
@@ -284,26 +324,25 @@ main>h1{
     justify-content: center;
 }
 main>.flex>#pres{
-    width: 70%;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 main>.flex>#pres>p{
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 main>.flex>#pres>img{
     width: 9.6875rem;
     height: auto;
     border-radius: 20%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-main>.flex>p{
-    font-size: 0.875rem;
-    margin-top: 2.5rem;
-    margin-bottom: 3.5rem;
-    width: 70%;
-}
+
 .flex>#valeurs{
     width: 70%;
+    margin-top: 5rem;
 }
 #valeurs>p{
     font-size: 0.875rem;
@@ -355,20 +394,20 @@ main>.flex>p{
 #titreEv>.vertFonceGras>p{
     font-size: 1.3rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
 }
-.Ev{
+#containerEv>.Ev{
     position: relative;
     width: 100%;
 }
-.Ev>img{
+#containerEv>.Ev>img{
     width: 15.625rem;
     height: auto;
     margin: 0 auto;
     display: block;
 }
-.Ev>p{
+#containerEv>.Ev>p{
     position: absolute;
     font-size: 1rem;
     top: 50%; 
@@ -380,7 +419,7 @@ main>.flex>p{
 strong{
     font-weight: bold;
 }
-.etiquetteEv{
+#containerEv>.etiquetteEv{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 2;
@@ -391,33 +430,33 @@ strong{
     padding:20px;
     border-radius: 20px;
 }
-.etiquetteEv>.titreEtiquette{
+#containerEv>.etiquetteEv>.titreEtiquette{
     grid-column: 1/2;
     grid-row: 1;
 }
-.titreEtiquette>img{
+#containerEv>.titreEtiquette>img{
     grid-column: 3;
     grid-row: 1;
 }
-main>.etiquetteEv>p{
+main>#containerEv>.etiquetteEv>p{
     grid-column: 1;
     grid-row: 2;  
 }
-main>.etiquetteEv>.figureAction>img{
+main>#containerEv>.etiquetteEv>.figureAction>img{
     width: 11rem;
     height:10.625rem;
     border-radius: 20px;
     justify-self: end;
     align-self: center;
 }
-main>.etiquetteEv>.go>img{
+main>#containerEv>.etiquetteEv>.go>img{
     width: 4rem;
     height: auto;
     position: absolute;
     top: 0;
     right: 0;
 }
-main > .etiquetteEv > .figureAction {
+main >#containerEv>.etiquetteEv > .figureAction {
     display: grid;  
     justify-items: end; 
 }
@@ -433,6 +472,9 @@ main > .etiquetteEv > .figureAction {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    text-align: center;
 }
 #DIY{
     display: grid;
@@ -446,43 +488,170 @@ main > .etiquetteEv > .figureAction {
     width: 100%;
     height: 4rem;
     background-color: #fff ;
-    opacity: 70%;
     margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
+    font-weight: 650;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);;
 }
-.cardTuto{
+#cardTutoContainer>.cardTuto{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 16rem;
-    height: 18.75rem;
+    height: 20rem;
     background-color: #FAF3E0;
     padding: 1.5rem;
     border-radius: 20px;
     margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-.cardTuto>img{
+#cardTutoContainer>.cardTuto>img{
     width: 12.625rem;
     height: auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-.cardTuto>p{
+#cardTutoContainer>.cardTuto>p{
     text-align: center;
     margin-top: 1rem;
+    
 }
-.cardTuto>.buttonTuto{
-    width: 4.8125rem;
-    height: 1.875rem;
-    background-color: #EDE0C8;
+button {
+    position: relative;
+    padding: 15px 45px;
+    background: #fec195;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    cursor: pointer;
+    border: 1px solid #fec195;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    margin-top: 1rem;
-}
+  }
+  
+  button:hover {
+    border: 1px solid #f3b182;
+    background: linear-gradient(
+      85deg,
+      #fec195,
+      #fcc196,
+      #fabd92,
+      #fac097,
+      #fac39c
+    );
+    animation: wind 2s ease-in-out infinite;
+  }
+  
+  @keyframes wind {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    0% {
+      background-position: 50% 100%;
+    }
+  
+    0% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .icon-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    transform-origin: 0 0;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+  }
+  
+  button:hover .icon-1 {
+    animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+    transform: rotate(10deg);
+  }
+  
+  @keyframes slay-1 {
+    0% {
+      transform: rotate(10deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  .icon-2 {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 12px;
+    transform-origin: 50% 0;
+    transform: rotate(10deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  }
+  
+  button:hover .icon-2 {
+    animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+  
+  @keyframes slay-2 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(15deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+    .icon-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    transform-origin: 50% 0;
+    transform: rotate(-5deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  }
+  
+    button:hover .icon-3 {
+    animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+  
+  @keyframes slay-3 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
 .bold{
     font-weight: 600;
     margin-top: 1rem;
@@ -493,11 +662,12 @@ main > .etiquetteEv > .figureAction {
 #meditationFigure>img{
     width: 100%;
     height:auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 #sousTitre2{
     width: 100%;
     height: 3rem;
-    background-image: url(../images/OiseauSousTitre.png);
+    background-image: url(../images/OiseauSousTitre.webp);
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -505,7 +675,7 @@ main > .etiquetteEv > .figureAction {
     font-weight: bold;
     color: #fff;
     position: relative;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 }
 #sousTitre2>img{
     position: absolute;
@@ -524,7 +694,7 @@ main > .etiquetteEv > .figureAction {
 #sousTitre3{
     width: 100%;
     height: 3rem;
-    background-image: url(../images/feuillesSousTitre.png);
+    background-image: url(../images/feuillesSousTitre.webp);
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -532,7 +702,7 @@ main > .etiquetteEv > .figureAction {
     font-weight: bold;
     color: #fff;
     position: relative;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 }
 #sousTitre3>img{
     position: absolute;
@@ -543,10 +713,11 @@ main > .etiquetteEv > .figureAction {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.2rem;
     margin-top: 3.5rem;
     margin-bottom: 2rem;
     width: 100%;
+    gap: 1rem;
+    text-wrap: wrap;
 }
 .Mediter>img{
     width: 1.625rem;
@@ -554,17 +725,28 @@ main > .etiquetteEv > .figureAction {
 }
 .Mediter>p{
     text-align: center;
+    margin-top: 2rem;
 }
 #contenuMediter>p{
-    margin: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: justify;
 }
 #contenuMediter2>p{
     margin: 1.5rem;
+    text-align: justify;
+}
+#mediterDeco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #mediterDeco>img{
     width: 18.625rem;
     height: auto;
 }
+
+/* parrainage*/
 #abeille{
     margin: 2rem;
 }
@@ -572,9 +754,11 @@ main > .etiquetteEv > .figureAction {
     width: auto;
     height: 11.5rem;
     border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
 }
 #abeille>p{
     padding-top: 2rem;
+    text-align: justify;
 }
 #abeille>p:first-of-type{
     text-align: center;
@@ -589,12 +773,14 @@ main > .etiquetteEv > .figureAction {
 }
 #abeille2>p{
     padding-top: 2rem;
+    text-align: justify;
 }
 #abeille2>img{
     width: auto;
     height: 11.5rem;
     border-radius: 20px;
     margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 #abeille, #abeille2{
     display: flex;
@@ -612,6 +798,7 @@ main > .etiquetteEv > .figureAction {
     background-color: #FFD780;
     border-radius: 20px;
     margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
 }
 #buttonAbeille>p{
     font-size: 1rem;
@@ -625,6 +812,7 @@ main > .etiquetteEv > .figureAction {
     width: 16.875rem;
     height: 4.625rem;
     border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .flex2{
     display: flex;
@@ -634,3 +822,130 @@ main > .etiquetteEv > .figureAction {
 }
 
 /* CONTACT */
+#figureBackground{
+    background-image: url(../images/plage2.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    padding-bottom: 3rem;
+}
+#contactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.nom{
+    width: 7.5rem;
+    height: 2.5rem;
+    background-color: #9ED19C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-group>input{
+    width: 15rem;
+    height: 2.5rem;
+    background-color: #9ED19C;
+    border-radius: 10px;
+    border: none;
+    margin-top: 2rem;
+    text-align: center;
+}
+.contactFormEmail{
+    display: flex;
+    gap: 2rem;
+}
+.contactFormNom{
+    display: flex;
+    gap: 2rem;
+}
+.italic{
+    font-style: italic;
+    font-weight: 400;
+}
+textarea {
+    width: 24rem;
+    flex: 1;
+    background-color: #9ED19C;
+    border-radius: 10px;
+    border: none;
+    margin: 2rem;
+    text-align: center;
+}
+button{
+    width: 7.5rem;
+    height: 2.5rem;
+    border-radius: 10px; 
+    background-color: #9ED19C;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 700px) { 
+    .actu-container { 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, auto); 
+        gap: 2.5rem; } 
+    main>.flex>#pres{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-top:3rem;
+        }
+        #cardTutoContainer{
+            display: flex;
+            gap: 20px; 
+            justify-content: space-between; 
+            margin-top: 2rem;
+        }
+
+    }
+
+
+@media screen and (min-width: 1140px ){
+    #containerEv{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5rem;
+        width: 80%;
+    }
+    #figureEv>.vertFonceGras>p{
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+    #sousTitre2>img{
+        width: 10rem;
+        height: auto;
+    }
+    #sousTitre3>img{
+        width: 10rem;
+        height: auto;
+    }
+    #mediterDeco>img{
+        width: 25rem;
+        height: auto;
+    }
+    #contenuMediter2,#contenuMediter, #abeille, #abeille2{
+        width: 60%;
+        margin-left:20%;
+        margin-right: 20%;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+    main>#figure>p{
+        font-size: 2rem;
+    }
+}
