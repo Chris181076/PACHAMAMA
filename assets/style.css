@@ -89,6 +89,46 @@ header>#burger>.mainMenu>ul>li:hover{
     background-color: #D2B48C;
     color: #fff;
 }
+/*navbar*/
+#navbar{
+    display:block;
+}
+.navbar {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    background-color: #c19a6b; /* Ton légèrement plus foncé que #D2B48C */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centrer la navbar horizontalement */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px; /* Espacement entre les titres */
+}
+
+.navbar-menu li {
+    text-transform: uppercase;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff; /* Blanc pour contraster */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #f5e0c3; /* Couleur plus claire au survol */
+}
+
 /*main*/
 main>#figure{
     width: 100%;
@@ -940,11 +980,29 @@ button{
         margin-left:20%;
         margin-right: 20%;
     }
+    #navbar{
+        display: block;
+    }
+    #burger{
+        display: none;
+    }
+    #boutonsHeader{
+      display: block;
+      margin-right: 43%;
+    }
 
 }
 
 @media screen and (min-width: 1000px){
     main>#figure>p{
         font-size: 2rem;
+    }
+}
+@media screen and (max-width: 1145px){
+    #navbar{
+        display: none;
+    }
+    #burger{
+        display: block;
     }
 }
