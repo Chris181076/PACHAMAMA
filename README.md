@@ -7,3 +7,4 @@ wwf (c'est à ce moment que je me suis dit que je pouvais difficilement faire un
 https://www.coeurdeforet.com/
 http://ahtarame.org/renouer-avec-la-nature/
  
+W3C n'aime pas l'effet hover que j'ai copié collé, et je n'ai pas le temps de changer ça;
