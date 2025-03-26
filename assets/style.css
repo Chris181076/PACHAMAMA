@@ -858,7 +858,8 @@ button {
     background-color: #FFD780;
     border-radius: 20px;
     margin-top: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 #buttonAbeille>p{
     font-size: 1rem;
@@ -873,6 +874,7 @@ button {
     height: 4.625rem;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor:pointer;
 }
 .flex2{
     display: flex;
